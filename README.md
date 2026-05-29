@@ -1,7 +1,9 @@
 #  Carro Seguidor de Líneas de Colores — Proyecto Final Sistemas Digitales 🚗
 
 > **Fundación Universitaria Compensar · Sistemas Digitales**  
+
   Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / 
+  
 > Docente: Diego Alejandro Barragán Vargas
 
 
