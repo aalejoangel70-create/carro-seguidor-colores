@@ -35,7 +35,7 @@ En este punto aún éramos optimistas. El chasis de MDF llegó en piezas y tarda
 
 | Vista frontal con sensor ultrasónico | Vista superior con Arduino |
 |--------------------------------------|---------------------------|
-| WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM.jpeg | ![Carro vista superior](images/foto2.jpeg) |
+| WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM.jpeg | ![Carro vista superior](WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM%20(1).jpeg) |
 
 ### Fase 2 — Integración de componentes en el laboratorio
 
