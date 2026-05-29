@@ -1,9 +1,10 @@
 #  Carro Seguidor de Líneas de Colores — Proyecto Final Sistemas Digitales 🚗
 
 > **Fundación Universitaria Compensar · Sistemas Digitales**  
+  Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / 
 > Docente: Diego Alejandro Barragán Vargas
 
----
+
 
 ## ¿Que se quiso lograr?
 La idea central es que el carro ruede sobre una pista con segmentos de 
@@ -29,8 +30,6 @@ para que un carro de madera y cables sea capaz de leer su entorno y obedecer
 tu voz.
 
 
----
-
 ## Objetivo del Proyecto
 
 Diseñar e implementar un sistema embebido basado en Arduino que:
@@ -41,7 +40,6 @@ Diseñar e implementar un sistema embebido basado en Arduino que:
 - Reciba comandos de voz para controlar el movimiento del carro (arriba, abajo, derecha, izquierda)
 - Comunicación bidireccional Arduino ↔ PC vía USB o Bluetooth
 
----
 
 ## 📸 Así quedó el Carro
 
@@ -70,7 +68,6 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 |----------------------------|---------------------------------------|
 | ![Ajuste sensor](WhatsApp%20Image%202026-05-29%20at%205.02.33%20PM%20(1).jpeg) | ![Bluetooth HC-05 y sensor de color](WhatsApp%20Image%202026-05-29%20at%205.02.33%20PM%20(2).jpeg) |
 
----
 
 ## Componentes utilizados
 
@@ -91,7 +88,6 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 
 El flujo es más sencillo de lo que parece una vez que lo ves completo:
 
-```
 [Línea de color en el piso]
         ↓
 [Sensor TCS3200 detecta el color]
@@ -106,9 +102,9 @@ El flujo es más sencillo de lo que parece una vez que lo ves completo:
         ↓
 [Chatbot responde preguntas sobre el proyecto]
 [Reconocimiento de voz envía comandos al Arduino]
-```
 
----
+
+
 
 ## 💻 Instalación y uso
 
@@ -152,7 +148,6 @@ streamlit run streamlit_app/app.py
 
 La app se abre en `http://localhost:8501`. Desde ahí puedes ver el color detectado en tiempo real, hablarle al chatbot y darle comandos de voz al carro.
 
----
 
 ## 🎙️ Comandos de voz disponibles
 
@@ -164,7 +159,7 @@ La app se abre en `http://localhost:8501`. Desde ahí puedes ver el color detect
 | *"Izquierda"* | Gira a la izquierda |
 | *"Detente"* / *"Para"* | Frena |
 
----
+
 
 ## 🎨 Colores que detecta el carro
 
@@ -178,7 +173,7 @@ La pista tiene segmentos de 5 colores distintos y el carro identifica en cuál e
 | 🟢 Verde | Indicador verde activo |
 | 🔵 Azul | Panel azul iluminado |
 
----
+
 
 ## 🤖 El Chatbot
 
@@ -191,7 +186,7 @@ Integramos un chatbot usando la API de Claude (Anthropic) que puede responder pr
 
 El chatbot tiene contexto completo del proyecto, así que puede explicar desde el cableado hasta la arquitectura del software.
 
----
+
 
 ## Problemas que nos encontramos (y cómo los resolvimos)
 
@@ -209,11 +204,11 @@ Porque un README honesto incluye las partes malas también:
 **Streamlit se reiniciaba cada vez que llegaba un dato serial**  
 → Solución: `st.session_state` para guardar el estado entre reruns, y threading para la lectura serial en segundo plano.
 
----
+
 
 ## Diagrama de conexiones (Arduino)
 
-```
+
 Arduino Uno
 ├── Pin 2  → TCS3200 S0
 ├── Pin 3  → TCS3200 S1
@@ -228,10 +223,10 @@ Arduino Uno
 ├── Pin 12 → HC-05 RX
 ├── 5V     → TCS3200 VCC, HC-05 VCC
 └── GND    → Todo el GND común
-```
 
 
----
+
+
 
 > *"El primer carro que hicimos iba en círculos. El segundo iba en círculos más grandes. Al tercero le pusimos nombre."*  
 > — El equipo, semestre 2026-1
