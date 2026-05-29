@@ -43,7 +43,7 @@ Acá empezó el caos bonito. Cables por todos lados, el profesor mirando desde l
 
 | Revisando conexiones del driver de motores | Vista completa del cableado |
 |--------------------------------------------|-----------------------------|
-| ![Laboratorio vista trasera](images/foto3.jpeg) | ![Vista completa](images/foto4.jpeg) |
+| ![Laboratorio vista trasera](WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM%20(2).jpeg) | ![Vista completa](WhatsApp%20Image%202026-05-29%20at%205.02.33%20PM.jpeg) |
 
 ### Fase 3 — Cableado fino y sensor de color
 
@@ -51,7 +51,7 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 
 | Ajuste de pines del sensor | Conexiones del módulo Bluetooth HC-05 |
 |----------------------------|---------------------------------------|
-| ![Ajuste sensor](images/foto5.jpeg) | ![Bluetooth HC-05 y sensor de color](images/foto6.jpeg) |
+| ![Ajuste sensor](WhatsApp%20Image%202026-05-29%20at%205.02.33%20PM%20(1).jpeg) | ![Bluetooth HC-05 y sensor de color](WhatsApp%20Image%202026-05-29%20at%205.02.33%20PM%20(2).jpeg) |
 
 ---
 
