@@ -1,45 +1,62 @@
-# 🚗 Carro Seguidor de Líneas de Colores — Proyecto Final Sistemas Digitales
+#  Carro Seguidor de Líneas de Colores — Proyecto Final Sistemas Digitales 🚗
 
-> **Fundación Universitaria Compensar · Telecomunicaciones**  
-> Curso: Sistemas Digitales · Docente: Diego Alejandro Barragán Vargas
-
----
-
-## ¿De qué va esto?
-
-Honestamente, cuando nos dijeron que el proyecto final era construir un carro robótico que detectara colores y lo controláramos por voz desde una app web... pensamos que era demasiado. Spoiler: sí lo era. Pero lo logramos.
-
-Este repositorio documenta **todo** el proceso: desde las primeras soldaduras (y quemadas de dedos) hasta la app funcionando en Streamlit con chatbot incluido. Si estás leyendo esto y eres estudiante de semestres futuros, ojalá este repo te ahorre las 3 horas que nosotros perdimos tratando de entender por qué el HC-05 no emparejaba. 
+> **Fundación Universitaria Compensar · Sistemas Digitales**  
+> Docente: Diego Alejandro Barragán Vargas
 
 ---
 
-## 🎯 Objetivo del Proyecto
+## ¿Que se quiso lograr?
+La idea central es que el carro ruede sobre una pista con segmentos de 
+diferentes colores, negro, blanco, rojo, verde y azul y sea capaz de 
+identificar en tiempo real sobre qué color está pasando. Esa información 
+viaja desde el Arduino hasta una aplicación web donde se visualiza al instante.
+Pero no se quedó solo en eso. El proyecto tiene tres capas:
+- **El hardware:** un chasis 4WD ensamblado a mano, con un sensor de color 
+  TCS3200 que ve la pista, un driver L298N que controla los motores, y un 
+  módulo Bluetooth HC-05 para comunicación inalámbrica.
+
+- **El software embebido:** código en Arduino que lee el sensor, clasifica el 
+  color y lo transmite por serial o Bluetooth hacia la PC, además de recibir 
+  comandos de movimiento de vuelta.
+
+- **La interfaz web:** una app en Streamlit que muestra el color detectado en 
+  tiempo real, incluye un chatbot con inteligencia artificial capaz de explicar 
+  el proyecto, y permite controlar el carro con comandos de voz — solo diciendo 
+  "adelante", "izquierda" o "detente".
+
+En resumen: un sistema donde el hardware, el software y la IA trabajan juntos 
+para que un carro de madera y cables sea capaz de leer su entorno y obedecer 
+tu voz.
+
+
+---
+
+## Objetivo del Proyecto
 
 Diseñar e implementar un sistema embebido basado en Arduino que:
 
-- ✅ Siga líneas de **5 colores distintos** (negro, blanco, rojo, verde, azul)
-- ✅ Transmita el color detectado en **tiempo real** a una app web en Streamlit
-- ✅ Incluya un **chatbot conversacional** que explique el proyecto
-- ✅ Reciba **comandos de voz** para controlar el movimiento del carro (arriba, abajo, derecha, izquierda)
-- ✅ Comunicación bidireccional Arduino ↔ PC vía USB o Bluetooth
+- Siga líneas de **5 colores distintos (negro, blanco, rojo, verde, azul)
+- Transmita el color detectado en tiempo real a una app web en Streamlit
+- Incluya un chatbot conversacional que explique el proyecto
+- Reciba comandos de voz para controlar el movimiento del carro (arriba, abajo, derecha, izquierda)
+- Comunicación bidireccional Arduino ↔ PC vía USB o Bluetooth
 
 ---
 
-## 📸 Así quedó el bicho
+## 📸 Así quedó el Carro
 
-> Aquí está el proceso completo, desde el chasis pelado hasta el carro listo para rodar.
+> Aquí está el proceso completo:
 
 ### Fase 1 — Ensamblaje inicial del chasis
 
-En este punto aún éramos optimistas. El chasis de MDF llegó en piezas y tardamos más en armarlo que en programar la mitad del código.
-
+Aca tenemos que ensamblar todas las piezas, armar el chasis que a la final no se dificulto tanto como lo pensabamos
 | Vista frontal con sensor ultrasónico | Vista superior con Arduino |
 |--------------------------------------|---------------------------|
 | ![Carro ensamblado vista frontal](WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM.jpeg) | ![Carro vista superior](WhatsApp%20Image%202026-05-29%20at%205.02.32%20PM%20(1).jpeg) |
 
 ### Fase 2 — Integración de componentes en el laboratorio
 
-Acá empezó el caos bonito. Cables por todos lados, el profesor mirando desde lejos con cara de "van a quemarlo todo", y nosotros tratando de descifrar el datasheet del L298N a las 10pm.
+Acá si fue un poco complejo porque veiamos Cables por todos lados y es un poco canson y miedo a llegar a quemar algo y arruinar el trabajo hecho
 
 | Revisando conexiones del driver de motores | Vista completa del cableado |
 |--------------------------------------------|-----------------------------|
@@ -47,7 +64,7 @@ Acá empezó el caos bonito. Cables por todos lados, el profesor mirando desde l
 
 ### Fase 3 — Cableado fino y sensor de color
 
-La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto ya teníamos el multi­metro como mejor amigo.
+La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto ya teníamos el multi­metro de ayuda
 
 | Ajuste de pines del sensor | Conexiones del módulo Bluetooth HC-05 |
 |----------------------------|---------------------------------------|
@@ -55,7 +72,7 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 
 ---
 
-## 🧰 Componentes utilizados
+## Componentes utilizados
 
 | Componente | Especificación | ¿Para qué sirve? |
 |---|---|---|
