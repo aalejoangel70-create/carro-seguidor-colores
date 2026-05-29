@@ -86,34 +86,6 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 | **Sensor ultrasónico** | HC-SR04 | Detección de obstáculos (feature extra 👀) |
 | **Protoboard + cables** | Jumpers M-M, M-H | Las conexiones que mantienen todo unido |
 
----
-
-## 🗂️ Estructura del repositorio
-
-```
-📦 carro-seguidor-colores/
-├── 📁 arduino/
-│   ├── carro_seguidor.ino        ← Código principal del Arduino
-│   └── calibracion_colores.ino  ← Sketch para calibrar el sensor TCS3200
-├── 📁 streamlit_app/
-│   ├── app.py                   ← Dashboard principal en Streamlit
-│   ├── chatbot.py               ← Módulo del chatbot conversacional
-│   ├── serial_bridge.py         ← Comunicación serial Arduino ↔ Python
-│   └── voice_commands.py        ← Reconocimiento de voz (comandos de movimiento)
-├── 📁 images/
-│   ├── foto1.jpeg               ← Fotos del proceso
-│   ├── foto2.jpeg
-│   ├── foto3.jpeg
-│   ├── foto4.jpeg
-│   ├── foto5.jpeg
-│   └── foto6.jpeg
-├── 📁 docs/
-│   └── PROYECTO_FINAL.pdf       ← Guía original del proyecto
-├── requirements.txt             ← Dependencias de Python
-└── README.md                    ← Esto que estás leyendo
-```
-
----
 
 ## ⚙️ ¿Cómo funciona todo junto?
 
@@ -221,7 +193,7 @@ El chatbot tiene contexto completo del proyecto, así que puede explicar desde e
 
 ---
 
-## 🐛 Problemas que nos encontramos (y cómo los resolvimos)
+## Problemas que nos encontramos (y cómo los resolvimos)
 
 Porque un README honesto incluye las partes malas también:
 
@@ -239,7 +211,7 @@ Porque un README honesto incluye las partes malas también:
 
 ---
 
-## 📐 Diagrama de conexiones (Arduino)
+## Diagrama de conexiones (Arduino)
 
 ```
 Arduino Uno
@@ -258,19 +230,6 @@ Arduino Uno
 └── GND    → Todo el GND común
 ```
 
----
-
-## 👥 Equipo
-
-Este proyecto fue desarrollado como trabajo final del curso **Sistemas Digitales** en la Fundación Universitaria Compensar.
-
-**Docente:** Diego Alejandro Barragán Vargas — Ingeniero Electrónico, Magíster en Ingeniería, estudiante doctoral en la UDFJC.
-
----
-
-## 📄 Licencia
-
-MIT — úsalo, modifícalo, mejóralo. Si lo usas para tu propio proyecto, un crédito siempre se agradece 🙌
 
 ---
 
