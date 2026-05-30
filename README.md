@@ -116,6 +116,8 @@ Se realizaron simulaciones electrónicas y lógicas utilizando Tinkercad con el 
 
 ![Mi imagen](Imagen1.jpg)
 
+![Mi imagen](Imagen2.jpg)
+
 
 
 
