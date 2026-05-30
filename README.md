@@ -138,6 +138,7 @@ Se realizaron pruebas funcionales sobre el prototipo físico verificando:
 
  RESULTADOS
 Los resultados obtenidos demostraron que el robot fue capaz de:
+
 •	seguir líneas correctamente.
 •	realizar movimientos autónomos.
 •	detectar cambios de trayectoria.
@@ -266,7 +267,7 @@ Arduino Uno
 └── GND    → Todo el GND común
 
 
- CONCLUSIONES
+ **CONCLUSIONES**
 •	Arduino UNO permitió implementar un sistema robótico funcional de bajo costo.
 •	Los sensores CNY70 ofrecieron un comportamiento adecuado para seguimiento de líneas.
 •	El módulo L298N permitió controlar correctamente los motores del robot.
