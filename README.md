@@ -118,11 +118,36 @@ Se realizaron simulaciones electrónicas y lógicas utilizando Tinkercad con el 
 
 ![Mi imagen](Imagen2.jpg)
 
+La simulación permitió detectar errores de conexión y optimizar el sistema antes de su implementación física además de identificar posibles fallas de potencias y distribución de energía .
+
+Validación en Arduino IDE
+Se realizaron pruebas de compilación y depuración del código en Arduino IDE verificando:
+•	comunicación serial.
+•	respuesta Bluetooth.
+•	lectura de sensores.
+•	control de motores.
+•	estabilidad lógica del programa.
+Pruebas físicas
+Se realizaron pruebas funcionales sobre el prototipo físico verificando:
+•	seguimiento de líneas.
+•	respuesta ante obstáculos.
+•	estabilidad de movimiento.
+•	transmisión de datos Bluetooth.
+•	funcionamiento del servomotor.
 
 
+ RESULTADOS
+Los resultados obtenidos demostraron que el robot fue capaz de:
+•	seguir líneas correctamente.
+•	realizar movimientos autónomos.
+•	detectar cambios de trayectoria.
+•	evitar obstáculos.
+•	ejecutar comandos Bluetooth.
+•	Chat Bot Fenputadora
+Las simulaciones en Tinkercad y las pruebas físicas permitieron validar la funcionalidad general del sistema como también la mitigación de problemas físicos.
 
 
-## 💻 Instalación y uso
+##  Instalación y uso
 
 ### 1. Clonamos el repositorio
 
@@ -241,8 +266,9 @@ Arduino Uno
 └── GND    → Todo el GND común
 
 
-
-
-
-> *"El primer carro que hicimos iba en círculos. El segundo iba en círculos más grandes. Al tercero le pusimos nombre."*  
-> — El equipo, semestre 2026-1
+ CONCLUSIONES
+•	Arduino UNO permitió implementar un sistema robótico funcional de bajo costo.
+•	Los sensores CNY70 ofrecieron un comportamiento adecuado para seguimiento de líneas.
+•	El módulo L298N permitió controlar correctamente los motores del robot.
+•	Las simulaciones en Tinkercad facilitaron la validación temprana del sistema.
+•	La integración de hardware y software permitió desarrollar un prototipo funcional de robótica móvil autónoma.
