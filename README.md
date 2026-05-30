@@ -2,7 +2,7 @@
 
 > **Fundación Universitaria Compensar · Sistemas Digitales**  
 
->Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / 
+>Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / Angel Cruz
   
 > Docente: Diego Alejandro Barragán Vargas
 
@@ -15,7 +15,7 @@ identificar en tiempo real sobre qué color está pasando. Esa información
 viaja desde el Arduino hasta una aplicación web donde se visualiza al instante.
 Pero no se quedó solo en eso. El proyecto tiene tres capas:
 - **El hardware:** un chasis 4WD ensamblado a mano, con un sensor de color 
-  TCS3200 que ve la pista, un driver L298N que controla los motores, y un 
+  NY70 que ve la pista, un driver L298N que controla los motores, y un 
   módulo Bluetooth HC-05 para comunicación inalámbrica.
 
 - **El software embebido:** código en Arduino que lee el sensor, clasifica el 
@@ -64,7 +64,7 @@ Acá si fue un poco complejo porque veiamos Cables por todos lados y es un poco 
 
 ### Fase 3 — Cableado fino y sensor de color
 
-La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto ya teníamos el multi­metro de ayuda
+La parte más delicada. El NY70/HC-05 tiene pines muy juntos y en este punto ya teníamos el multi­metro de ayuda
 
 | Ajuste de pines del sensor | Conexiones del módulo Bluetooth HC-05 |
 |----------------------------|---------------------------------------|
@@ -76,7 +76,7 @@ La parte más delicada. El TCS3200/HC-05 tiene pines muy juntos y en este punto 
 | Componente | Especificación | ¿Para qué sirve? |
 |---|---|---|
 | **Arduino Uno** | ATmega328P | El cerebro de todo. Recibe datos del sensor y controla los motores |
-| **Sensor de color** | TCS3200 / TCS34725 | Detecta el color de la línea bajo el carro |
+| **Sensor de color** |NY70 | Detecta el color de la línea bajo el carro |
 | **Chasis** | 4WD MDF | La base física del carro — lo armamos nosotros |
 | **Motores DC** | 3–6V con ruedas amarillas | La tracción, sin ellos sería solo una tabla con cables |
 | **Driver de motores** | L298N | Controla dirección y velocidad de cada motor |
@@ -106,18 +106,28 @@ El flujo es más sencillo de lo que parece una vez que lo ves completo:
 [Reconocimiento de voz envía comandos al Arduino]
 
 
+ **VaLIDACIÓN Y PRUEBAS**
+ **Simulación en Tinkercad**
+Se realizaron simulaciones electrónicas y lógicas utilizando Tinkercad con el fin de:
+•	validar conexiones.
+•	verificar lectura de sensores.
+•	comprobar lógica de movimiento.
+•	analizar comportamiento de motores.
+
+
+
 
 
 ## 💻 Instalación y uso
 
-### 1. Clona el repositorio
+### 1. Clonamos el repositorio
 
 ```bash
 git clone https://github.com/TU_USUARIO/carro-seguidor-colores.git
 cd carro-seguidor-colores
 ```
 
-### 2. Instala las dependencias de Python
+### 2. Instalamos las dependencias de Python
 
 ```bash
 pip install -r requirements.txt
@@ -132,11 +142,11 @@ anthropic        # Para el chatbot con Claude
 pyaudio
 ```
 
-### 3. Carga el código al Arduino
+### 3. Cargamos el código al Arduino
 
 Abre `arduino/carro_seguidor.ino` en el Arduino IDE y cárgalo al Arduino Uno. Antes de cargar, verifica en la pestaña de calibración cuáles son los valores RGB que entrega el sensor para cada color en tu pista — cada impresión es diferente.
 
-### 4. Conecta el Arduino y corre la app
+### 4. Conectamos el Arduino y corremos la app
 
 ```bash
 # Asegúrate de cambiar el puerto COM en serial_bridge.py
@@ -146,7 +156,7 @@ Abre `arduino/carro_seguidor.ino` en el Arduino IDE y cárgalo al Arduino Uno. A
 streamlit run streamlit_app/app.py
 ```
 
-### 5. ¡Listo!
+### 5. Listo
 
 La app se abre en `http://localhost:8501`. Desde ahí puedes ver el color detectado en tiempo real, hablarle al chatbot y darle comandos de voz al carro.
 
@@ -163,7 +173,7 @@ La app se abre en `http://localhost:8501`. Desde ahí puedes ver el color detect
 
 
 
-## 🎨 Colores que detecta el carro
+## Colores que detecta el carro
 
 La pista tiene segmentos de 5 colores distintos y el carro identifica en cuál está:
 
@@ -177,7 +187,7 @@ La pista tiene segmentos de 5 colores distintos y el carro identifica en cuál e
 
 
 
-## 🤖 El Chatbot
+## El Chatbot
 
 Integramos un chatbot usando la API de Claude (Anthropic) que puede responder preguntas como:
 
@@ -192,7 +202,7 @@ El chatbot tiene contexto completo del proyecto, así que puede explicar desde e
 
 ## Problemas que nos encontramos (y cómo los resolvimos)
 
-Porque un README honesto incluye las partes malas también:
+Porque un repositorio honesto incluye las partes malas también:
 
 **El HC-05 no emparejaba con Windows 11**  
 → Solución: hay que ponerlo en modo AT y cambiar la velocidad de baudios a 9600. Usamos el comando `AT+UART=9600,0,0`.
@@ -208,7 +218,7 @@ Porque un README honesto incluye las partes malas también:
 
 
 
-## Diagrama de conexiones (Arduino)
+## Diagrama de conexiones con el arduino
 
 
 Arduino Uno
