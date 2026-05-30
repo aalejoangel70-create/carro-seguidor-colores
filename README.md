@@ -113,6 +113,7 @@ Se realizaron simulaciones electrónicas y lógicas utilizando Tinkercad con el 
 •	verificar lectura de sensores.
 •	comprobar lógica de movimiento.
 •	analizar comportamiento de motores.
+(imagen1.jpg)
 
 
 
