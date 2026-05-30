@@ -2,7 +2,7 @@
 
 > **Fundación Universitaria Compensar · Sistemas Digitales**  
 
-  Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / 
+>Alumno: Gilbert Alejandro Angel Jimenes / Jorge torrenegra / 
   
 > Docente: Diego Alejandro Barragán Vargas
 
